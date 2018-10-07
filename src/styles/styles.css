@@ -10,12 +10,8 @@ a.active {
   color: orange;
 }
 
-nav {
-  padding-top: 20px;
-}
-
 .container {
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 h1 {

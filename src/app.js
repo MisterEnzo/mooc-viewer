@@ -1,10 +1,11 @@
 import React, {Component, PropTypes} from 'react';
+import Header from './components/shared/header';
 
 class App extends Component {
   render() {
     return(
       <div>
-        <p>Header here...</p>
+        <Header />
         {this.props.children}
       </div>
     );

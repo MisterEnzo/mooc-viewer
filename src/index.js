@@ -5,10 +5,12 @@ import configureStore from './store/configure_store';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
+import { loadCourses } from './actions/course_actions';
 import './styles/styles.css';
 import '../node_modules/materialize-css/dist/css/materialize.min.css';
 
 const store = configureStore();
+store.dispatch(loadCourses());
 
 render(
   <Provider store={store}>

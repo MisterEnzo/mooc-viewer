@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import * as courseActions from '../../actions/course_actions';
 import { bindActionCreators } from 'redux';
+import CourseList from './course_list';
 
 class CoursesPage extends Component {
   constructor(props, context){
@@ -42,7 +43,6 @@ class CoursesPage extends Component {
           type="submit"
           className="btn"
           onClick={this.onClickSave} />
-
       </div>
     );
   }

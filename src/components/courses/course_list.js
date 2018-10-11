@@ -1,21 +1,24 @@
 import React, { PropTypes } from 'react';
+import CourseListRow from './course_list_row';
 
-const renderCourse = (courses) => {
-  courses.map((course, index) =>
-    <li key={index}>
-      course
-    </li>
-  );
-};
-
-const CourseList = ( props ) => {
+const CourseList = ( { courses } ) => {
   return (
-    <div>
-      <h1>Courses</h1>
-      <ul>
-        {props.courses}
-      </ul>
-    </div>
+    <table className="table">
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Category</th>
+          <th>Length</th>
+        </tr>
+      </thead>
+      <tbody>
+        {courses.map(course => {
+          return <CourseListRow key={course.id} course={course} />
+        })}
+      </tbody>
+    </table>
   );
 };
 

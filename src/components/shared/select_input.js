@@ -3,8 +3,8 @@ import React, {PropTypes} from 'react';
 const SelectInput = ({name, label, onChange, defaultOption, value, error, options}) => {
   return (
     <div className="row">
-      <label htmlFor={name}>{label}</label>
       <div className="input-field col s6 offset-s3">
+        <label htmlFor={name}>{label}</label>
         <select
           name={name}
           value={value}
@@ -15,7 +15,7 @@ const SelectInput = ({name, label, onChange, defaultOption, value, error, option
             return <option key={option.value} value={option.value}>
                     {option.text}
                    </option>
-          };)}
+          ;})}
         </select>
       </div>
     </div>
